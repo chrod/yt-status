@@ -4,7 +4,7 @@ Recent bike inventory shortages have made it difficult to buy new bikes and manu
 I had success in alerting on YT stock using this routine. Helped a friend actually get a bike last week.   
 Posting this here; hopefully this little program is useful for someone.    
 
-This little script can be run with a cron job every 5 minutes, for example, to check stock in YT Jeffsy 27.5 bikes, size XL.   
+This little script can be run with a cron job every 5 minutes, for example, to check stock in some YT Jeffsy 27.5 bike models, size XL.   
 With a little [work](https://github.com/chrod/yt-status#check-stock-for-yt-bikes-other-than-those-above) you can reuse this for any YT bike you like.    
 If your bike is in stock, you'll get an email within a few seconds. Power be to the programmer and good luck! ;)    
 
