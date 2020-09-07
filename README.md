@@ -1,6 +1,6 @@
 # yt-status
 
-Checking YT Bikes stock every couple hours gets old real quick. Recent bike inventory shortages have made it difficult to buy new bikes. 
+Recent bike inventory shortages have made it difficult to buy new bikes and manually checking YT Bikes stock every couple hours gets old _real quick_.    
 I had success in alerting on YT stock using this routine. Helped a friend actually get a bike last week.   
 Posting this here; hopefully this little program is useful for someone.    
 
