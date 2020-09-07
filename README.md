@@ -1,13 +1,16 @@
 # yt-status
 
-Checking YT Bikes stock every couple hours gets old. Recent bike inventory shortages have made it difficult to buy new bikes. I had success in alerting on YT stock using this routine. Posting this here; hopefully this little program is useful for someone.
+Checking YT Bikes stock every couple hours gets old real quick. Recent bike inventory shortages have made it difficult to buy new bikes. 
+I had success in alerting on YT stock using this routine. Helped a friend actually get a bike last week.   
+Posting this here; hopefully this little program is useful for someone.    
 
-This little script can be run with a cron job every 5 minutes, for example, to check stock in YT Jeffsy 27.5 bikes, size XL. If "in stock" 
+This little script can be run with a cron job every 5 minutes, for example, to check stock in YT Jeffsy 27.5 bikes, size XL.     
+If your bike is in stock, you'll get an email within a few seconds. Power be to the programmer and good luck! ;)    
 
 <img width="400" alt="Intro" src="https://user-images.githubusercontent.com/16260619/92419652-aace0800-f123-11ea-9aea-5cfe2bb3b1fe.png"> 
 
 ### Prereqs
-- Linux (ubuntu 18.04 used here)
+- Linux (ubuntu 18.04 used here, both on x86 and aarch64)
 - Python3 with the following packages (can be installed with python3-pip) and some library prereqs
     - `sudo apt-get update && sudo apt-get install python3 python3-pip `
     - `pip3 install bs4 smtplib`
@@ -25,7 +28,7 @@ This little script can be run with a cron job every 5 minutes, for example, to c
 - Additional tip: Create an email filter to apply a label to your messages. [example](https://support.google.com/a/users/answer/9308833?hl=en)
 - See below to add your own bike types
 
-#### Successful run output (in-stock):
+#### Successful run output (in stock, email if last status check = "out of stock"):
 ```
 chrod@odroidc2:~/src/yt-status$ python3 yt-status.py 
 email creds set to: email.address@gmail.com ################ (redacted)
@@ -49,7 +52,7 @@ YT Bikes in Stock:
 - tues-XXL-green: https://us.yt-industries.com/detail/index/sArticle/2367/sCategory/261
 ```
 
-#### Typical run output (out of stock):   
+#### Typical run output (out of stock, no email):   
 ```
 chrod@odroid:~/src/yt-status$ python3 yt-status.py 
 email creds set to: email.address@gmail.com ################ (redacted)
@@ -72,8 +75,8 @@ No YT bike stock updates to report.
 ```
 
 ### Running with cron
-Linux / UNIX (crontab)[https://man7.org/linux/man-pages/man5/crontab.5.html] is very useful for executing commands on a regular schedule. 
-I implemented this script to run at 5 minute intervals
+I implemented this script to run at 5 minute intervals until my friend got his bike.  
+Linux / UNIX [crontab](https://man7.org/linux/man-pages/man5/crontab.5.html) is very useful for executing commands on a regular schedule.    
 From `crontab -e`:   
 ```
 ## Sample crontab
@@ -90,7 +93,9 @@ In the yt_bikes dict, you need to provide 2 new pieces of information:
 
 <img width="1014" alt="YT Page" src="https://user-images.githubusercontent.com/16260619/92419448-7dcd2580-f122-11ea-8bf5-738ef91585bf.png">  
 
-This will open the "Developer Options" menu where you can extract the html content.  In this case, the html string we want is the full `div class`: `col-xs-12 col-sm-9 vcenter lieferangabe-13 nopadding-left`. Copy that and the URL, and add them to the dict with a convenient unique description of the bike.
+This will open the "Developer Options" menu where you can extract the html content.     
+In this case, the html string we want is the full `div class`: `col-xs-12 col-sm-9 vcenter lieferangabe-13 nopadding-left`.     
+Copy that and the URL, and add them to the dict with a convenient unique description of the bike.    
 
 ```
     yt_bikes = {"2020 Jeffsy 27 Pro XL - blackmagic":
