@@ -28,7 +28,7 @@ This little script can be run with a cron job every 5 minutes, for example, to c
 #### Successful run output (in-stock):
 ```
 chrod@odroidc2:~/src/yt-status$ python3 yt-status.py 
-email creds set to: moskva.mitch@gmail.com ################ (redacted)
+email creds set to: email.address@gmail.com ################ (redacted)
 Querying bikes from template...
 Checking on tues-LG-blackmagic...
   (No Warning)
