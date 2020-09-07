@@ -23,7 +23,7 @@ If your bike is in stock, you'll get an email within a few seconds. Power be to 
 ### Installation and setup
 - Clone this repo to a local directory
 - `cd yt-status`
-- Create a file called `.email_creds` and add your destination email address and gmail App password on two separate lines. (see `.email_creds_example`)
+- Create a file called `.email_creds` and add your destination email address and gmail App password on two separate lines. (see [`.email_creds_example`](https://github.com/chrod/yt-status/blob/master/.email_creds_example))
 - Run once with: `python3 ./yt-status.py`
 - If the bike(s) are in stock, the script will compose an email message with the subject `YT Bikes in stock` and send to your gmail address. 
 - Additional tip: Create an email filter to apply a label to your messages. [example](https://support.google.com/a/users/answer/9308833?hl=en)
