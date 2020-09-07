@@ -86,7 +86,7 @@ From `crontab -e`:
 */5 * * * * python3 /home/user/src/yt-status/yt-status.py
 ```
 ### Check stock for YT bikes other than those above
-YT Bikes websites use common html tags for their website. You can key on these to check stock for a bike type and size.    
+YT Bikes websites use unique static html descriptors in their website model stock fields. You can key on these to check stock for any bike type and size.    
 
 In the script's yt_bikes [dict](https://github.com/chrod/yt-status/blob/master/yt-status.py#L109), you need to provide 2 new pieces of information:
 - `url`: the full URL path to the bike purchase page of interest
