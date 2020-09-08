@@ -29,7 +29,7 @@ If your bike is in stock, you'll get an email within a few seconds. Power be to 
 - Additional tip: Create an email filter to apply a label to your messages. [example](https://support.google.com/a/users/answer/9308833?hl=en)
 - See below to add your own bike types
 
-#### Successful run output (in stock, email if last status check = "out of stock"):
+#### Successful run output (in stock, email if last status check = "sold out"):
 ```
 chrod@odroidc2:~/src/yt-status$ python3 yt-status.py 
 email creds set to: email.address@gmail.com ################ (redacted)
@@ -90,7 +90,7 @@ YT Bikes websites use unique static html descriptors in their website model stoc
 
 In the script's yt_bikes [dict](https://github.com/chrod/yt-status/blob/master/yt-status.py#L109), you need to provide 2 new pieces of information:
 - `url`: the full URL path to the bike purchase page of interest
-- `div_kwd`: the unique string of html that accompanies the "in stock" / "out of stock" status on the page for your Bike Model/Size.  You can find this by right-clicking on the "out of stock" text in your browser and choosing "Inspect".    
+- `div_kwd`: the unique string of html that accompanies the "in stock" / "sold out" status on the page for your Bike Model/Size.  You can find this by right-clicking on the "out of stock" text in your browser and choosing "Inspect".    
 
 <img width="1014" alt="YT Page" src="https://user-images.githubusercontent.com/16260619/92419448-7dcd2580-f122-11ea-8bf5-738ef91585bf.png">  
 
