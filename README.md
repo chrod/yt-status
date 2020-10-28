@@ -8,7 +8,7 @@ This little script can be run with a cron job every 5 minutes, for example, to c
 With a little [work](https://github.com/chrod/yt-status#check-stock-for-yt-bikes-other-than-those-above) you can reuse this for any YT bike you like.    
 If your bike is in stock, you'll get an email within a few seconds. Power be to the programmer and good luck! ;)    
 
-<img width="400" alt="Intro" src="https://user-images.githubusercontent.com/16260619/92419652-aace0800-f123-11ea-9aea-5cfe2bb3b1fe.png"> 
+<img width="400" alt="Intro" src="images/92419652-aace0800-f123-11ea-9aea-5cfe2bb3b1fe.png"> 
 
 ### Prereqs
 - Linux (ubuntu 18.04 used here, both on x86 and aarch64)
@@ -92,7 +92,7 @@ In the script's yt_bikes [dict](https://github.com/chrod/yt-status/blob/master/y
 - `url`: the full URL path to the bike purchase page of interest
 - `div_kwd`: the unique string of html that accompanies the "in stock" / "sold out" status on the page for your Bike Model/Size.  You can find this by right-clicking on the "out of stock" text in your browser and choosing "Inspect".    
 
-<img width="1014" alt="YT Page" src="https://user-images.githubusercontent.com/16260619/92419448-7dcd2580-f122-11ea-8bf5-738ef91585bf.png">  
+<img width="1014" alt="YT Page" src="images/92419448-7dcd2580-f122-11ea-8bf5-738ef91585bf.png">  
 
 This will open the "Developer Options" menu where you can extract the html content.     
 In this case, the html string we want is the full `div class`: `col-xs-12 col-sm-9 vcenter lieferangabe-13 nopadding-left`.     
